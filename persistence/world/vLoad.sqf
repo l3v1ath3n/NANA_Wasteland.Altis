@@ -80,8 +80,20 @@ if (!isNil "_exists" && {_exists}) then
 					_veh setVariable ["A3W_objectTextures", _objTextures, true];
 				};
 
-				{ _veh setVariable [_x select 0, _x select 1] } forEach _variables;
-
+				//{ _veh setVariable [_x select 0, _x select 1] } forEach _variables;
+				
+				{
+					_var = _x select 0;
+					_value = _x select 1;
+					
+					//Add action to loaded vehicle
+					switch (_var) do {
+						case "vehicleLocked": {_veh lock _value};
+					};
+					
+					_veh setVariable [_var, _value, true] 
+				} forEach _variables;
+				
 				clearWeaponCargoGlobal _veh;
 				clearMagazineCargoGlobal _veh;
 				clearItemCargoGlobal _veh;
@@ -98,7 +110,7 @@ if (!isNil "_exists" && {_exists}) then
 				};
 				if (!isNil "_magazines") then
 				{
-					[_veh, _magazines] call processMagazineCargo;
+					{ _veh addMagazineCargoGlobal _x } forEach _magazines;
 				};
 				if (!isNil "_items") then
 				{
