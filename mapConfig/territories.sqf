@@ -32,5 +32,17 @@
 	//["TERRITORY_DIDYMOS_TRANSMITTER_2", "Didymos Transmitter Two", 500, "TRANSMITTER"],
 	["TERRITORY_MAGOS_TRANSMITTER", "Magos Transmitter", 500, "TRANSMITTER"],
 	["TERRITORY_PYRSOS_TRANSMITTER", "Pyrsos Transmitter", 500, "TRANSMITTER"],
-	["TERRITORY_MILITARY_RESEARCH", "Telos Military Base", 500, "MILITARY"]
+	["TERRITORY_MILITARY_RESEARCH", "Telos Military Base", 500, "MILITARY"],
+	["TERRITORY_TURBINES_0", "Southern Cowasaur Turbines", 500, "TURBINE"],
+	["TERRITORY_TURBINES_1", "Southern Dredhawk Turbines", 500, "TURBINE"],
+	["TERRITORY_TURBINES_2", "Southern Wolf Turbines", 500, "TURBINE"],
+	["TERRITORY_TURBINES_3", "Southern SOBr13n Turbines", 500, "TURBINE"],
+	["TERRITORY_TURBINES_4", "Southern McGrizzle Turbines", 500, "TURBINE"],
+	["TERRITORY_TURBINES_5", "Southern KrazyK Turbines", 500, "TURBINE"],
+	["TERRITORY_TURBINES_6", "Southern drag0n Turbines", 500, "TURBINE"],
+	["TERRITORY_DRAGONSEYE", "Dragon's Eye", 500, "TURBINE"],
+	["TERRITORY_NORTHISLE", "McGrizzle Isle", 500, "LAND"],
+	["TERRITORY_THETAINT", "The Taint", 1000, "SEA"],
+	["TERRITORY_LIGHTHOUSE_0", "Lighthouse Beefaloaf", 1000, "LIGHTHOUSE"],
+	["TERRITORY_LIGHTHOUSE_1", "Lighthouse L3V1ATH3N", 1000, "LIGHTHOUSE"]
 ]

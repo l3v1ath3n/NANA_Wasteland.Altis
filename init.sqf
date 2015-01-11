@@ -10,8 +10,13 @@
 
 enableSaving [false, false];
 
-_descExtPath = str missionConfigFile;
-currMissionDir = compileFinal str (_descExtPath select [0, count _descExtPath - 15]);
+currMissionDir = compileFinal str call
+{
+	private "_arr";
+	_arr = toArray str missionConfigFile;
+	_arr resize (count _arr - 15);
+	toString _arr
+};
 
 X_Server = false;
 X_Client = false;
@@ -36,7 +41,7 @@ if (!isDedicated) then
 {
 	[] spawn
 	{
-		9999 cutText ["Welcome to A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
+		9999 cutText ["Welcome to [NANA] A3Wasteland, please wait while we check your pockets...  (initializing)", "BLACK", 0.01];
 
 		waitUntil {!isNull player};
 		removeAllWeapons player;
