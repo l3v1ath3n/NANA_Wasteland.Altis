@@ -74,3 +74,32 @@ class CfgNotifications
 {
 	#include "client\CfgNotifications.hpp"
 };
+
+class CfgSounds
+{
+    sounds[] =
+	{
+		carlock, carunlock, caralarm
+	};
+
+	class carlock
+	{
+		name = "carlock";
+		sound[] = {client\sounds\car_lock.ogg,9.0,1};
+		titles[] = {};
+	};
+	class carunlock
+	{
+		name = "carlock";
+		sound[] = {client\sounds\car_unlock.ogg,9.0,1};
+		titles[] = {};
+	};
+	class caralarm
+	{
+		name = "caralarm";
+		sound[] = {client\sounds\car_alarm.ogg,1.0,1};
+		titles[] = {};
+	};
+};
+#include "addons\bank\ui.hpp"
+#include "addons\bank\bank_menu.hpp"
