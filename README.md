@@ -1,3 +1,4 @@
+Rotten-Banana.com FORK of:
 *Wasteland.Altis* by Team Wasteland!
 ===================
 ArmA 3 Wasteland is a harsh survival sandbox mission where 2 teams and independent players fight for survival.
@@ -10,4 +11,3 @@ ArmA 3 Wasteland is a harsh survival sandbox mission where 2 teams and independe
        KoS - Bewilderbeest
        404 - Del1te
 
-Rotten-Banana FORK
