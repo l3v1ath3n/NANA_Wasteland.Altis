@@ -150,3 +150,6 @@ if (["A3W_teamPlayersMap"] call isConfigOn) then
 		};
 	} forEach crew _x;
 } forEach allUnitsUAV;
+
+[] execVM "addons\far_revive\FAR_revive_init.sqf";
+[] execVM "addons\bank\functions.sqf";
