@@ -40,7 +40,7 @@ _setupObjects =
 	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup;
 
 	_missionPicture = getText (configFile >> "CfgVehicles" >> typeOf _wreck >> "picture");
-	_missionHintText = "A helicopter has come down under enemy fire!";
+	_missionHintText = "A helicopter has crashed due to a drunken pilot!";
 };
 
 _waitUntilMarkerPos = nil;
