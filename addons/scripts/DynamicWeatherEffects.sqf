@@ -26,11 +26,11 @@ if (count _this > 4) then { _debug = _this select 4; } else { _debug = false; };
 
 // Minimum time in minutes for the weather (fog and overcast) to change. Must be greater than or equal to 1 and less than or equal to
 // _maxWeatherChangeTimeMin. When weather changes, it is fog OR overcast that changes, not both at the same time. (Suggested value: 10).
-_minWeatherChangeTimeMin = 20;
+_minWeatherChangeTimeMin = 10;
 
 // Maximum time in minutes for the weather (fog and overcast) to change. Must be greater than or equal to _minWeatherChangeTimeMin.
 // (Suggested value: 20).
-_maxWeatherChangeTimeMin = 40;
+_maxWeatherChangeTimeMin = 20;
 
 // Minimum time in minutes that weather (fog and overcast) stays constant between weather changes. Must be less than or equal to 0 and
 // greater than or equal to _minWeatherChangeTimeMin. (Suggested value: 5).
@@ -45,8 +45,8 @@ _maxTimeBetweenWeatherChangesMin = 10;
 _minimumFog = 0;
 
 // Fog intensity never exceeds this value. Must be between 0 and 1 and greater than or equal to _minimumFog
-// (0 = no fog, 1 = pea soup). (Suggested value: 0.1).
-_maximumFog = 0.1;
+// (0 = no fog, 1 = pea soup). (Suggested value: 0.8).
+_maximumFog = 0.60;
 
 // New ArmA3 facilities added by Bewilderbeest
 _minimumFogDecay = 0.001;
@@ -68,7 +68,7 @@ _minimumRain = 0.01;
 
 // When raining, rain intensity never exceeds this value. Must be between 0 and 1 and greater than or equal to _minimumRain
 // (0 = no rain, 1 = maximum rain intensity). (Suggested value: 0.8);
-_maximumRain = 0.5;
+_maximumRain = 0.8;
 
 // Wind vector strength never falls below this value. Must be greater or equal to 0 and less than or equal to _maximumWind.
 // (Suggested value: 0);
@@ -239,9 +239,12 @@ drn_fnc_DynamicWeather_SetWeatherLocal = {
 	};
 	if (_currentWeatherChange == "FOG") then {
 		if (typeName _targetWeatherValue == "ARRAY") then {
-			_targetWeatherValue = _targetWeatherValue select 0;
+			_targetWeatherValue = [(_targetWeatherValue select 0) max (_currentRain / 4), 0.001, 1000]; // override decay value
+		}
+		else {
+			_targetWeatherValue = _targetWeatherValue max (_currentRain / 4);
 		};
-		_timeUntilCompletion setFog [_targetWeatherValue max (_currentRain / 4), 0.001, 1000];;
+		_timeUntilCompletion setFog _targetWeatherValue;
 	};
 };
 
