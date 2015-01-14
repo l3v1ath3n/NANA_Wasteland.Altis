@@ -102,7 +102,6 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-<<<<<<< HEAD
 		briefingName="[NANA] A3Wasteland Altis v1.1";
 		overviewText="[NANA] Wasteland survival sandbox by Team Wasteland (A3Wasteland.com)";
 		resistanceWest=0;
