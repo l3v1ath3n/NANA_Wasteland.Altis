@@ -154,6 +154,3 @@ call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 		};
 	} forEach crew _x;
 } forEach allUnitsUAV;
-
-[] execVM "addons\far_revive\FAR_revive_init.sqf";
-[] execVM "addons\bank\functions.sqf";

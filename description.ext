@@ -102,5 +102,3 @@ class CfgSounds
 		titles[] = {};
 	};
 };
-#include "addons\bank\ui.hpp"
-#include "addons\bank\bank_menu.hpp"
