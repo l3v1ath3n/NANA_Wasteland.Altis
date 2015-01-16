@@ -3945,6 +3945,7 @@ class Mission
 			b=6;
 			rectangular=1;
 			activationBy="ANY";
+			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="chopshop1";
