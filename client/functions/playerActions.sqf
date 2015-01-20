@@ -19,6 +19,9 @@
 
 	["<img image='client\icons\repair.paa'/> Salvage", "client\actions\salvage.sqf", [], 1.1, false, false, "", "!isNull cursorTarget && !alive cursorTarget && {cursorTarget isKindOf 'AllVehicles' && !(cursorTarget isKindOf 'Man') && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 2}"],
 
+	["Resupply", "addons\resupply\resupply.sqf", [], 51, false, false, "", "!isNull cursorTarget && alive cursorTarget && {{ cursorTarget isKindOf _x } count ['O_Truck_03_device_F'] > 0 ;} && !(vehicle player == player) && (player distance cursortarget) < 50 && !((vehicle player) isKindOf 'Air')"],
+	["Resupply Aircraft", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['TERRITORY_SALTFLATS_AIRFIELD', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Air'"],
+
 	["[0]"] call getPushPlaneAction,
 	["Push vehicle", "server\functions\pushVehicle.sqf", [2.5, true], 1, false, false, "", "[2.5] call canPushVehicleOnFoot"],
 	["Push vehicle forward", "server\functions\pushVehicle.sqf", [2.5], 1, false, false, "", "[2.5] call canPushWatercraft"],
