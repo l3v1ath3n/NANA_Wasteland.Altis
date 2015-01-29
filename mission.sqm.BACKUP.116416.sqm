@@ -54,11 +54,16 @@ class Mission
 		"a3_characters_f_beta",
 		"a3_characters_f_gamma",
 		"a3_characters_f",
+<<<<<<< HEAD
+		"A3_Structures_F_EPC_Civ_Accessories",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Misc_F_Helpers",
 		"a3_roads_f",
 		"A3_Data_F",
 		"A3_Soft_F_EPC_Truck_03"
+=======
+		"A3_Structures_F_EPC_Civ_Accessories"
+>>>>>>> pr/26
 	};
 	addOnsAuto[]=
 	{
@@ -74,6 +79,7 @@ class Mission
 		"A3_Structures_F_Civ_Market",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Structures_F_EPC_Civ_Accessories",
+<<<<<<< HEAD
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Structures_F_Ind_Shed",
 		"A3_Structures_F_Mil_Flags",
@@ -84,6 +90,8 @@ class Mission
 		"A3_Data_F",
 		"a3_roads_f",
 		"A3_Soft_F_EPC_Truck_03",
+=======
+>>>>>>> pr/26
 		"a3_map_altis"
 	};
 	randomSeed=14957468;
