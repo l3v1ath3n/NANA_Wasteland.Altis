@@ -777,7 +777,9 @@ colorsArray = compileFinal str
 			["Yellow Camo", _texDir + "camo_fuel.jpg"],
 			["Orange Camo", _texDir + "camo_fack.jpg"],
 			["Red Camo", _texDir + "camo_deser.jpg"],
-			["Pink Camo", _texDir + "camo_pank.jpg"]
+			["Pink Camo", _texDir + "camo_pank.jpg"],
+			["[NANA] Kryptek", _texDir + "nana_kryptek.jpg"],
+			["[NANA] Rotten", _texDir + "nana_rotten.jpg"]
 		]
 	],
 	[ // Kart colors
