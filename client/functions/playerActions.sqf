@@ -8,6 +8,12 @@
 
 { [player, _x] call fn_addManagedAction } forEach
 [
+	["Resupply Aircraft", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['TERRITORY_SALTFLATS_AIRFIELD', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Air'"],
+	["Resupply Land", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_SEA', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'LandVehicle'"],
+	["Resupply Sea", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_SEA', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Ship'"],
+	["Resupply Land", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_LAND', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'LandVehicle'"],
+	["Resupply Sea", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_LAND', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Ship'"],
+
 	["Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player != ''"],
 	["Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
 
@@ -18,9 +24,6 @@
 	["<img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa'/> <t color='#FFFFFF'>Cancel Action</t>", { doCancelAction = true }, [], 1, false, false, "", "mutexScriptInProgress"],
 
 	["<img image='client\icons\repair.paa'/> Salvage", "client\actions\salvage.sqf", [], 1.1, false, false, "", "!isNull cursorTarget && !alive cursorTarget && {cursorTarget isKindOf 'AllVehicles' && !(cursorTarget isKindOf 'Man') && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 2}"],
-
-	["Resupply", "addons\resupply\resupply.sqf", [], 51, false, false, "", "!isNull cursorTarget && alive cursorTarget && {{ cursorTarget isKindOf _x } count ['O_Truck_03_device_F'] > 0 ;} && !(vehicle player == player) && (player distance cursortarget) < 50 && !((vehicle player) isKindOf 'Air')"],
-	["Resupply Aircraft", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['TERRITORY_SALTFLATS_AIRFIELD', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Air'"],
 
 	["[0]"] call getPushPlaneAction,
 	["Push vehicle", "server\functions\pushVehicle.sqf", [2.5, true], 1, false, false, "", "[2.5] call canPushVehicleOnFoot"],
