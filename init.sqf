@@ -74,3 +74,4 @@ if (isServer) then
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\IntroText\intro.sqf";
+[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions

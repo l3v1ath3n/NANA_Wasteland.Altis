@@ -102,7 +102,7 @@ class CfgSounds
 	};
 	class carunlock
 	{
-		name = "carlock";
+		name = "carunlock";
 		sound[] = {client\sounds\car_unlock.ogg,9.0,1};
 		titles[] = {};
 	};
