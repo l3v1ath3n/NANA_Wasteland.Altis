@@ -750,6 +750,8 @@ colorsArray = compileFinal str
 	[ // Main colors
 		"All",
 		[
+			["[NANA] Kryptek", _texDir + "nana_kryptek.jpg"],
+			["[NANA] Rotten", _texDir + "nana_rotten.jpg"],
 			["Black", _color + "(0.01,0.01,0.01,1)"], // #(argb,8,8,3)color(0.1,0.1,0.1,0.1)
 			["Grey", _color + "(0.15,0.151,0.152,1)"], // #(argb,8,8,3)color(0.5,0.51,0.512,0.3)
 			["White", _color + "(0.75,0.75,0.75,1)"], // #(argb,8,8,3)color(1,1,1,0.5)
@@ -775,9 +777,7 @@ colorsArray = compileFinal str
 			["Yellow Camo", _texDir + "camo_fuel.jpg"],
 			["Orange Camo", _texDir + "camo_fack.jpg"],
 			["Red Camo", _texDir + "camo_deser.jpg"],
-			["Pink Camo", _texDir + "camo_pank.jpg"],
-			["[NANA] Kryptek", _texDir + "nana_kryptek.jpg"],
-			["[NANA] Rotten", _texDir + "nana_rotten.jpg"]
+			["Pink Camo", _texDir + "camo_pank.jpg"]
 		]
 	],
 	[ // Kart colors
@@ -795,6 +795,7 @@ colorsArray = compileFinal str
 	[ // MH-9 colors
 		"Heli_Light_01_base_F",
 		[
+			["[NANA] Standard", _texDir + "heli_light_01\nana_bird_01.jpg"],
 			["AAF Camo (MH-9)", [[0, _mh9Dir + "heli_light_01_ext_indp_co.paa"]]],
 			["Blue 'n White (MH-9)", [[0, _mh9Dir + "heli_light_01_ext_blue_co.paa"]]],
 			["Blueline (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_blueline_co.paa"]]],
@@ -812,8 +813,7 @@ colorsArray = compileFinal str
 			["Sunset (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_sunset_co.paa"]]],
 			["Vrana (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_vrana_co.paa"]]],
 			["Wasp (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_wasp_co.paa"]]],
-			["Wave (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_wave_co.paa"]]],
-			["[NANA] Test", _texDir + "heli_light_01\nana_bird_01.jpg"]
+			["Wave (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_wave_co.paa"]]]
 		]
 	],
 	[ // Mohawk colors
