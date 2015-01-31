@@ -285,7 +285,9 @@ R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
 R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 [
 	// e.g. : "MyLifterVehicleClassName1", "MyLifterVehicleClassName2"
-	"Helicopter_Base_F"
+	"B_Heli_Transport_03_F",
+	"O_Heli_Transport_04_F",
+	"I_Heli_Transport_02_F"
 ];
 
 /**
@@ -309,7 +311,10 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"SDV_01_base_F",
 	"Boat_Civil_01_base_F",
 	"Boat_Armed_01_base_F",
-	"Wheeled_APC_F"
+	"Wheeled_APC_F",
+	"LandVehicle",
+	"Air",
+	"Ship"
 ];
 
 
