@@ -5,7 +5,7 @@
 
 _onScreenTime = 8;
 
-sleep 45;
+sleep 60;
 
 _role1 = "Welcome to Rotten-Banana.com A3Wasteland";
 _role1names = ["This server is under continuous configuration. We are doing our best to keep maintenance restarts to a minimum.","Please understand that database resets and errors can occur."];
@@ -16,7 +16,7 @@ _role3names = ["www.rotten-banana.com"];
 _role4 = "Vehicles";
 _role4names = ["Vehicles remain on the server if used at least once every 72 hours."];
 _role5 = "Vehicles";
-_role5names = ["All locked vehicles can be hot-wired by anyone with the right tools.","(LOCKS CURRENTLY DISABLED)"];
+_role5names = ["All locked vehicles can be hot-wired by engineers with the right tools."];
 _role6 = "Money";
 _role6names = ["Any ATM, is a working ATM. (1,000,000 limit)"];
 _role7 = "Pay Day";

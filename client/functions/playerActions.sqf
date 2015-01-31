@@ -13,6 +13,7 @@
 	["Resupply Sea", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_SEA', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Ship'"],
 	["Resupply Land", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_LAND', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'LandVehicle'"],
 	["Resupply Sea", "addons\resupply\resupply.sqf", [], 51, false, false, "", "['RESUPPLY_MARKER_LAND', getpos player] call BIS_fnc_inTrigger && !(vehicle player == player) && (vehicle player) isKindOf 'Ship'"],
+	["<img image='client\icons\r3f_unlock.paa'/> Break in and hotwire", "addons\breakLock\breakLock.sqf", [cursorTarget], 1,false,false,"","!isNull cursorTarget && vehicle player == player && {{ cursorTarget isKindOf _x } count ['LandVehicle', 'Ship', 'Air'] > 0 ;} && cursorTarget getVariable ['ownerUID',''] != getPlayerUID player && locked cursorTarget >= 2 && (['_engineer_', typeOf player] call fn_findString != -1) && cursorTarget distance player < 7 && ('ToolKit' in (items player)) && isNil {cursorTarget getVariable 'A3W_Truck'}"],
 
 	["Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player != ''"],
 	["Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
