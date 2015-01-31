@@ -38,7 +38,7 @@ if (!isDedicated) then
 	{
 		if (hasInterface) then // Normal player
 		{
-			9999 cutText ["Welcome to [NANA] A3Wasteland, please wait while we look at your 2014 W2...  (initializing)", "BLACK", 0.01];
+			9999 cutText ["Welcome to [NANA] A3Wasteland, please wait while we churn some butter...  (initializing)", "BLACK", 0.01];
 
 			waitUntil {!isNull player};
 			removeAllWeapons player;
