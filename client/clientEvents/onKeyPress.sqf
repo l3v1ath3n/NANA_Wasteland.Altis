@@ -43,7 +43,7 @@ switch (true) do
 	{
 		if (soundVolume > 0.5) then
 		{
-			0.5 fadeSound 0.2;
+			0.5 fadeSound 0.1;
 			["You've inserted your earplugs.", 5] call mf_notify_client;
 		}
 		else
