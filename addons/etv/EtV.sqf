@@ -3,6 +3,8 @@
 	-Allows players to attach their explosive charges to any vehicle.
 */
 
+EtV_LogicGroup = createGroup civilian;
+
 EtV_ChargeCheck =
 {
 	_charge = _this select 0;
@@ -14,6 +16,26 @@ EtV_ChargeCheck =
 	_return
 };
 
+EtV_ExplosionType =
+{
+	private ["_class","_explo"];
+	_class = _this select 0;
+	switch _class do
+	{
+		case "DemoCharge_Remote_Ammo":
+		{
+			_explo = "HelicopterExploSmall";
+		};
+		
+		case "SatchelCharge_Remote_Ammo":
+		{
+			_explo = "HelicopterExploBig";
+		};
+	};
+	
+	_explo
+};
+
 EtV_TouchOff =
 {
 	_array = _this select 3;
@@ -22,7 +44,8 @@ EtV_TouchOff =
 	{
 		if(alive _x) then
 		{
-			"HelicopterExploSmall" createVehicle (position _x);
+			_class = [typeOf _x] call EtV_ExplosionType;
+			_class createVehicle (position _x);
 			deleteVehicle _x;
 		};
 	} forEach _explosives;
@@ -50,7 +73,7 @@ EtV_TimedCharge =
 {
 	_explosive = _this select 0;
 	_unit = _this select 1;
-	_illogic = group server createUnit ["logic", Position _explosive, [], 0, "FORM"];
+	_illogic = EtV_LogicGroup createUnit ["logic", Position _explosive, [], 0, "FORM"];
 	_illogic attachTo [_explosive];
 	while {alive _explosive} do
 	{
@@ -59,7 +82,8 @@ EtV_TimedCharge =
 		{
 			_charges = _unit getVariable ["charges",[]];
 			_unit setVariable ["charges",_charges - [_explosive]];
-			"HelicopterExploSmall" createVehicle (position _explosive);
+			_class = [typeOf _explosive] call EtV_ExplosionType;
+			_class createVehicle (position _explosive);
 			deleteVehicle _explosive;
 		};
 		sleep 1;
@@ -83,6 +107,11 @@ EtV_AttachCharge =
 		case "DemoCharge_Remote_Mag":
 		{
 			_class = "DemoCharge_Remote_Ammo";
+		};
+		
+		case "SatchelCharge_Remote_Mag":
+		{
+			_class = "SatchelCharge_Remote_Ammo";
 		};
 	};
 	
@@ -146,12 +175,12 @@ EtV_UnitCheckTimer =
 	_return
 };
 
-//[unit] spawn EtV_Actions;
 EtV_Actions =
 {
 	private ["_unit"];
 	_unit = _this select 0;
 	_unit addAction ["<t color=""#FFE496"">" +"Attach Explosive Charge", EtV_AttachCharge, ["DemoCharge_Remote_Mag",_unit], 1, true, true, "","['DemoCharge_Remote_Mag',_target] call EtV_ChargeCheck"];
+	_unit addAction ["<t color=""#FFE496"">" +"Attach Explosive Satchel", EtV_AttachCharge, ["SatchelCharge_Remote_Mag",_unit], 1, true, true, "","['SatchelCharge_Remote_Mag',_target] call EtV_ChargeCheck"];
 	_unit addAction ["<t color=""#FFE496"">" +"Touch-Off Explosives", EtV_TouchOff, [_unit], 1, true, true, "","[_target] call EtV_UnitCheck"];
 	_unit addAction ["<t color=""#FFE496"">" +"+30Secs to Timer", EtV_Timer, [_unit], 1, true, true, "","[_target] call EtV_UnitCheckTimer"];
 };

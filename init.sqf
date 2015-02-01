@@ -75,3 +75,8 @@ if (isServer) then
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\IntroText\intro.sqf";
 [] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+
+waitUntil {time > 0};
+[] execVM "addons\etv\etv.sqf";
+waitUntil {!isNil "EtVInitialized"};
+[player] call EtV_Actions;

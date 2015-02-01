@@ -29,7 +29,7 @@ while { true } do
 
 			if (owner _unit > _serverID) then
 			{
-				if (alive _unit && !isPlayer _unit && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "UAVPilot"}) then
+				if (alive _unit && !isPlayer _unit && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "UAVPilot"} && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "invisible"}) then
 				{
 					if (isNil "_cheatFlag") then
 					{
