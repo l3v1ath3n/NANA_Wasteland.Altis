@@ -175,7 +175,9 @@ vehicleWeapons =
 	"arifle_MXM_F",
 	"srifle_EBR_F",
 	"LMG_Mk200_F",
-	"LMG_Zafir_F"
+	"LMG_Zafir_F",
+	"Chemlight_red",
+	"NVGoggles"
 ];
 
 vehicleAddition =
