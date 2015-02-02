@@ -23,6 +23,8 @@ _role7 = "Pay Day";
 _role7names = ["Rewards every 10 minutes for holding territories."];
 _role8 = "A tip for you...";
 _role8names = ["Press END to use ear plugs.  Great for loud vehicles."];
+_role9 = "Class Restrictions";
+_role9names = ["Only snipers use sniper rifles.","Only divers use underwater guns.","No refunds for poor purchasing choices!"];
 
 
 {
