@@ -503,13 +503,13 @@ genItemArray = compileFinal str
 	["UAV Terminal (AAF)", "I_UavTerminal", 150, "gps"],
 	["GPS", "ItemGPS", 550, "gps"],
 	["First Aid Kit", "FirstAidKit", 150, "item"],
-	["Medikit", "Medikit", 650, "item"],
-	["Toolkit", "ToolKit", 650, "item"],
-	["Mine Detector", "MineDetector", 650, "item"],
-	["NV Goggles", "NVGoggles", 400, "nvg"],
+	["Medikit", "Medikit", 1650, "item"],
+	["Toolkit", "ToolKit", 1650, "item"],
+	["Mine Detector", "MineDetector", 2650, "item"],
+	["NV Goggles", "NVGoggles", 600, "nvg"],
 	["Diving Goggles", "G_Diving", 200, "gogg"],
 	["Binoculars", "Binocular", 250, "binoc"],
-	["Rangefinder", "Rangefinder", 250, "binoc"],
+	["Rangefinder", "Rangefinder", 450, "binoc"],
 	["Laser Designator", "Laserdesignator", 975, "binoc"],
 	["Laser Batteries", "Laserbatteries", 125, "mag"],
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
@@ -642,16 +642,16 @@ armoredArray = compileFinal str
 
 tanksArray = compileFinal str
 [
-	["CRV-6e Bobcat", "B_APC_Tracked_01_CRV_F", 45500, "vehicle"],
+	["CRV-6e Bobcat", "B_APC_Tracked_01_CRV_F", 15500, "vehicle"],
 	["IFV-6c Panther", "B_APC_Tracked_01_rcws_F", 45600, "vehicle"],
 	["FV-720 Mora", "I_APC_tracked_03_cannon_F", 45600, "vehicle"],
 	["BTR-K Kamysh", "O_APC_Tracked_02_cannon_F", 45700, "vehicle"],
 	["IFV-6a Cheetah AA", "B_APC_Tracked_01_AA_F", 45700, "vehicle"],
 	["ZSU-39 Tigris AA", "O_APC_Tracked_02_AA_F", 46600, "vehicle"],
-	["M2A1 Slammer", "B_MBT_01_cannon_F", 58000, "vehicle"],
-	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 60000, "vehicle"], // Commander gun variant
-	["T-100 Varsuk", "O_MBT_02_cannon_F", 66000, "vehicle"],
-	["MBT-52 Kuma", "I_MBT_03_cannon_F", 75000, "vehicle"]
+	["M2A1 Slammer", "B_MBT_01_cannon_F", 60000, "vehicle"],
+	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 65000, "vehicle"], // Commander gun variant
+	["T-100 Varsuk", "O_MBT_02_cannon_F", 75000, "vehicle"],
+	["MBT-52 Kuma", "I_MBT_03_cannon_F", 70000, "vehicle"]
 ];
 
 
