@@ -58,6 +58,7 @@ switch (true) do
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Rangefinder";
+		_player linkItem "NVGoggles";
 	};
 };
 

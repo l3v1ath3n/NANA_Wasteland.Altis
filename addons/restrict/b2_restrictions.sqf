@@ -7,33 +7,24 @@
 
 if (isDedicated) exitWith {};
 
-private ["_r_class","_r_weap","_p_weap","_p_weap_base","_p_weap_base2","_p_weap_name","_s_weap","_s_weap_base","_s_weap_base2","_s_weap_name"];
+private ["_r_class","_r_weap","_c_weap","_c_weap_base","_c_weap_base2","_c_weap_name"];
 
 while {true} do
 {
-  sleep 1;
-  _r_class = _this select 0;
-  _r_weap = _this select 1;
+	sleep 1;
+	_r_class = _this select 0;
+	_r_weap = _this select 1;
 
-  _p_weap = primaryWeapon player;
-  _p_weap_base = configName(inheritsFrom (configFile >> "CfgWeapons" >> _p_weap));
-  _p_weap_base2 = configName(inheritsFrom (configFile >> "CfgWeapons" >> _p_weap_base));
-  _p_weap_name = getText(configFile >> "CfgWeapons" >>_p_weap >> "displayName");
+	_c_weap = currentWeapon player;
+	_c_weap_base = configName(inheritsFrom (configFile >> "CfgWeapons" >> _c_weap));
+	_c_weap_base2 = configName(inheritsFrom (configFile >> "CfgWeapons" >> _c_weap_base));
+	_c_weap_name = getText(configFile >> "CfgWeapons" >>_c_weap >> "displayName");
   
-  _s_weap = secondaryWeapon player;
-  _s_weap_base = configName(inheritsFrom (configFile >> "CfgWeapons" >> _s_weap));
-  _s_weap_base2 = configName(inheritsFrom (configFile >> "CfgWeapons" >> _s_weap_base));
-  _s_weap_name = getText(configFile >> "CfgWeapons" >>_s_weap >> "displayName");
-  
-  if (((_p_weap in _r_weap) || (_p_weap_base in _r_weap) || (_p_weap_base2 in _r_weap)) && !(typeOf player in _r_class))
-  then {
-    player removeWeapon _p_weap;
-    hint format ["RESTRICTED WEAPON\n\nYou are not qualified\nto use %1",_p_weap_name];
-  };
-  
-  if (((_s_weap in _r_weap) || (_s_weap_base in _r_weap) || (_s_weap_base2 in _r_weap)) && !(typeOf player in _r_class))
-  then {
-    player removeWeapon _s_weap;
-    hint format ["RESTRICTED WEAPON\n\nYou are not qualified\nto use %1",_s_weap_name];
-  };
+	if (((_c_weap in _r_weap) || (_c_weap_base in _r_weap) || (_c_weap_base2 in _r_weap)) && !(typeOf player in _r_class)) then 
+	{
+		//player removeWeapon _c_weap;
+		player action ["SwitchWeapon", player, player, 100];
+		hint format ["RESTRICTED WEAPON\n\nYou are not the correct\nclass to use\n%1",_c_weap_name];
+	};
+
 } forEach allUnits;
