@@ -80,7 +80,13 @@ class CfgSounds
 {
     sounds[] =
 	{
-		carlock, carunlock, caralarm, bell, ratchet
+		chaching, bell, ratchet
+	};
+	class chaching
+	{
+		name = "chaching";
+		sound[] = {client\sounds\chaching.ogg,9.0,1};
+		titles[] = {};
 	};
 	class bell
 	{
@@ -91,25 +97,7 @@ class CfgSounds
 	class ratchet
 	{
 		name = "ratchet";
-		sound[] = {client\sounds\tools-ratchet.ogg,9.0,1};
-		titles[] = {};
-	};
-	class carlock
-	{
-		name = "carlock";
-		sound[] = {client\sounds\car_lock.ogg,9.0,1};
-		titles[] = {};
-	};
-	class carunlock
-	{
-		name = "carunlock";
-		sound[] = {client\sounds\car_unlock.ogg,9.0,1};
-		titles[] = {};
-	};
-	class caralarm
-	{
-		name = "caralarm";
-		sound[] = {client\sounds\car_alarm.ogg,1.0,1};
+		sound[] = {client\sounds\ratchet.ogg,9.0,1};
 		titles[] = {};
 	};
 };
