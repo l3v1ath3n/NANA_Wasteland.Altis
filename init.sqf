@@ -1,4 +1,4 @@
-// ******************************************************************************************
+// *******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.2
@@ -82,6 +82,6 @@ waitUntil {!isNil "EtVInitialized"};
 [player] call EtV_Actions;
 
 
-0 = [["I_sniper_F","B_sniper_F", "O_sniper_F"],["srifle_GM6_F","srifle_LRR_F", "srifle_EBR_F","arifle_MXM_F"]] execVM "addons\restrict\b2_restrictions.sqf";
+//0 = [["I_sniper_F","B_sniper_F", "O_sniper_F"],["srifle_GM6_F","srifle_LRR_F", "srifle_EBR_F","arifle_MXM_F"]] execVM "addons\restrict\b2_restrictions.sqf";
 //0 = [["I_diver_F","B_diver_F", "O_diver_F"],["arifle_SDAR_F"]] execVM "addons\restrict\b2_restrictions.sqf";
 //0 = [["I_engineer_F","B_engineer_F", "O_engineer_F"],["ModuleOrdnanceMortar_F"]] execVM "addons\restrict\b2_restrictions.sqf";
