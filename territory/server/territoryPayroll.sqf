@@ -8,6 +8,7 @@ if (!isServer) exitWith {};
 
 _timeInterval = ["A3W_payrollInterval", 30*60] call getPublicVar;
 _moneyAmount = ["A3W_payrollAmount", 100] call getPublicVar;
+_totalonline = (playersNumber blufor + playersNumber opfor + playersNumber independent);
 
 _territoryCapped = false;
 
@@ -16,6 +17,8 @@ while {true} do
 	if (_territoryCapped) then
 	{
 		sleep _timeInterval;
+		_message2 = format ["[NANABOT]: Each territory is worth $%1 every %2 minutes, while %3 players are online.", [_moneyAmount * _totalonline] call fn_numbersText, ceil (_timeInterval / 60),[_totalonline] call fn_numbersText];
+		systemchat _message2;
 	}
 	else
 	{
@@ -56,8 +59,8 @@ while {true} do
 		_team = _x select 0;
 		_count = _x select 1;
 
-		_money = _count * _moneyAmount;
-		_message =  format ["Your team received a $%1 bonus for holding %2 territor%3 during the past %4 minutes", [_money] call fn_numbersText, _count, if (_count == 1) then { "y" } else { "ies" }, ceil (_timeInterval / 60)];
+		_money = _count * (_moneyAmount * _totalonline);
+		_message =  format ["Your team received a $%1 bonus for holding %2 territor%3.", [_money] call fn_numbersText, _count, if (_count == 1) then { "y" } else { "ies" }];
 
 		[[_message, _money], "A3W_fnc_territoryActivityHandler", _team, false] call A3W_fnc_MP;
 	} forEach _payouts;
