@@ -17,14 +17,18 @@ _role4 = "Vehicles";
 _role4names = [format ["Vehicles remain on the server if used at least once every %1 hours.", [A3W_vehicleMaxUnusedTime] call fn_numbersText]];
 _role5 = "Vehicles";
 _role5names = ["All locked vehicles can be hot-wired by engineers with the right tools."];
-_role6 = "Money";
-_role6names = [format ["Any ATM, is a working ATM. ($ %1 limit)", [A3W_atmMaxBalance] call fn_numbersText]];
-_role7 = "Pay Day";
-_role7names = [format ["Rewards every %1 minutes for holding territories.", [A3W_territoryPayroll] call fn_numbersText]];
-_role8 = "A tip for you...";
-_role8names = ["Press END to use ear plugs.  Great for loud vehicles."];
-_role9 = "Class Restrictions";
-_role9names = ["Only snipers use sniper rifles."];
+_role6 = "Pay Day";
+_role6names = [format ["Rewards every %1 minutes for holding territories.", [A3W_territoryPayroll] call fn_numbersText]];
+_role7 = "A tip for you...";
+_role7names = ["Press END to use ear plugs.  Great for loud vehicles."];
+_role8 = "Class Perks: Medic";
+_role8names = ["Perks coming soon."];
+_role9 = "Class Perks: Sniper";
+_role9names = ["Perks coming soon."];
+_role10 = "Class Perks: Engineer";
+_role10names = ["Perks coming soon."];
+_role11 = "Class Perks: Diver";
+_role11names = ["This class is dumb, and will be replaced", "with something more festive."];
 
 {
 sleep 2;
@@ -44,7 +48,6 @@ _onScreenTime,
 ] spawn BIS_fnc_dynamicText;
 sleep (_onScreenTime);
 } forEach [
-
 [_role1, _role1names],
 [_role2, _role2names],
 [_role3, _role3names],
@@ -52,6 +55,9 @@ sleep (_onScreenTime);
 [_role5, _role5names],
 [_role6, _role6names],
 [_role7, _role7names],
-[_role8, _role8names]
+[_role8, _role8names],
+[_role9, _role9names],
+[_role10, _role10names],
+[_role11, _role11names]
 ];
 
