@@ -85,6 +85,10 @@ else
 }
 forEach
 [
+	"A3W_payrollAmount",
+	"A3W_payrollInterval",
+	"A3W_territoryCaptureTime",
+	"A3W_vehicleLifetime",
 	"A3W_startingMoney",
 	"A3W_showGunStoreStatus",
 	"A3W_gunStoreIntruderWarning",
