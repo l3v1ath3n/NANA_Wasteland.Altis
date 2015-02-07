@@ -776,8 +776,8 @@ colorsArray = compileFinal str
 			["Orange Camo", _texDir + "camo_fack.jpg"],
 			["Red Camo", _texDir + "camo_deser.jpg"],
 			["Pink Camo", _texDir + "camo_pank.jpg"],
-			["[NANA] Kryptek", _texDir + "generic\nana_kryptek.jpg"],
-			["[NANA] Rotten", _texDir + "generic\nana_rotten.jpg"]
+			["[NANA] Kryptek", _texDir + "generic\generic-kryptek.jpg"],
+			["[NANA] Rotten", _texDir + "generic\generic-rotten.jpg"]
 		]
 	],
 	[ // Kart colors
@@ -795,20 +795,20 @@ colorsArray = compileFinal str
 	[ // Quadbike
 		"Quadbike_01_base_F",
 		[
-			["[NANA] Hex", _texDir + "quadbike_01\NANA_quad-body-hex-00.jpg"]
+			["[NANA] Hex", _texDir + "quadbike_01\quadbike_01-hex.jpg"]
 		]
 	],
 	[ // Hellcat
 		"I_Heli_light_03_base_F",
 		[
-			["[NANA] Shark", _texDir + "heli_light_03\NANA_nanashark_00.jpg"]
+			["[NANA] Shark", _texDir + "heli_light_03\heli_light_03-shark.jpg"]
 		]
 	],
 	[ // MH-9 colors
 		"Heli_Light_01_base_F",
 		[
-			["[NANA] Standard", _texDir + "heli_light_01\NANA_heli_standard_00.jpg"],
-			["[NANA] Tactical", _texDir + "heli_light_01\NANA_heli_tactical_00.jpg"],
+			["[NANA] Standard", _texDir + "heli_light_01\heli_light_01-standard.jpg"],
+			["[NANA] Tactical", _texDir + "heli_light_01\heli_light_01-tactical.jpg"],
 			["AAF Camo (MH-9)", [[0, _mh9Dir + "heli_light_01_ext_indp_co.paa"]]],
 			["Blue 'n White (MH-9)", [[0, _mh9Dir + "heli_light_01_ext_blue_co.paa"]]],
 			["Blueline (MH-9)", [[0, _mh9Dir + "Skins\heli_light_01_ext_blueline_co.paa"]]],
