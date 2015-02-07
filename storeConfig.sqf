@@ -792,7 +792,13 @@ colorsArray = compileFinal str
 			["Red (Kart)", [[0, _kartDir + "kart_01_base_red_co.paa"]]]
 		]
 	],
-	[ // Hellcat (Heli_light_03)
+	[ // Quadbike
+		"Quadbike_01_base_F",
+		[
+			["[NANA] Hex", _texDir + "quadbike_01\NANA_quad-body-hex-00.jpg"]
+		]
+	],
+	[ // Hellcat
 		"I_Heli_light_03_base_F",
 		[
 			["[NANA] Shark", _texDir + "heli_light_03\NANA_nanashark_00.jpg"]
