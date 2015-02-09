@@ -33,7 +33,7 @@ smgArray = compileFinal str
 rifleArray = compileFinal str
 [
 	// Underwater Gun
-	["SDAR Underwater Rifle (Diver only)", "arifle_SDAR_F", 925],
+	["SDAR Underwater Rifle", "arifle_SDAR_F", 925],
 
 	// Assault Rifles
 	["Mk20 Carbine", "arifle_Mk20C_plain_F", 800],
@@ -59,16 +59,16 @@ rifleArray = compileFinal str
 	["MX 3GL Rifle (Black)", "arifle_MX_GL_Black_F", 900],
 
 	// Markman Rifles
-	["MXM Rifle (Sniper Only)", "arifle_MXM_F", 1250],
-	["MXM Rifle Black (Sniper Only)", "arifle_MXM_Black_F", 1550],
+	["MXM Rifle", "arifle_MXM_F", 1250],
+	["MXM Rifle Black", "arifle_MXM_Black_F", 1550],
 	["DMR Rifle", "srifle_DMR_01_F", 1850],
-	["Mk18 ABR Rifle (Sniper Only)", "srifle_EBR_F", 1950],
+	["Mk18 ABR Rifle", "srifle_EBR_F", 1950],
 
 	// Sniper Rifles
-	["M320 LRR Sniper (Sniper Only)", "srifle_LRR_SOS_F", 7000],
-	["M320 LRR Sniper Camo (Sniper Only)", "srifle_LRR_camo_SOS_F", 9000],
-	["GM6 Lynx Sniper (Sniper Only)", "srifle_GM6_SOS_F", 9000],
-	["GM6 Lynx Sniper camo (Sniper Only)", "srifle_GM6_camo_SOS_F", 9000]
+	["M320 LRR Sniper", "srifle_LRR_SOS_F", 7000],
+	["M320 LRR Sniper Camo", "srifle_LRR_camo_SOS_F", 9000],
+	["GM6 Lynx Sniper", "srifle_GM6_SOS_F", 9000],
+	["GM6 Lynx Sniper camo", "srifle_GM6_camo_SOS_F", 9000]
 ];
 
 lmgArray = compileFinal str
