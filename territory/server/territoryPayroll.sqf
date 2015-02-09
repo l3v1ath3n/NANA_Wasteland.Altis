@@ -56,9 +56,11 @@ while {true} do
 	{
 		_team = _x select 0;
 		_count = _x select 1;
+		_totalonline = (playersNumber blufor + playersNumber opfor + playersNumber independent);
 
-		_money = _count * (_moneyAmount * _totalonline);
-		_message =  format ["Your team received a $%1 bonus for holding %2 territor%3. Each territory is currently worth $%4 while %5 players are online.", _money, _count, if (_count == 1) then { "y" } else { "ies" }, _moneyAmount, _totalonline];
+		_newterritoryvalue = (_moneyAmount * _totalonline);
+		_money = (_count * _newterritoryvalue);
+		_message =  format ["Your team received a $%1 bonus for holding %2 territor%3. Each territory is currently worth $%4 while %5 players are online.", _money, _count, if (_count == 1) then { "y" } else { "ies" }, _newterritoryvalue, _totalonline];
 
 		[[_message, _money], "A3W_fnc_territoryActivityHandler", _team, false] call A3W_fnc_MP;
 	} forEach _payouts;
