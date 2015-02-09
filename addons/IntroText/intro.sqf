@@ -7,6 +7,10 @@ _onScreenTime = 8;
 
 sleep 60;
 
+_maxLifetime = ["A3W_vehicleLifetime", 0] call getPublicVar;
+_timeInterval = ["A3W_payrollInterval", 30*60] call getPublicVar;
+
+
 _role1 = "Welcome to Rotten-Banana.com A3Wasteland";
 _role1names = ["This server is under continuous configuration. We are doing our best to keep maintenance restarts to a minimum.","Please understand that database resets and errors can occur."];
 _role2 = "Server Admins";
@@ -14,21 +18,19 @@ _role2names = ["Beefaloaf, L3V1ATH3N, SOBr13n, McGrizzle, KrazyK, Wolf, DredHawk
 _role3 = "Visit us";
 _role3names = ["www.rotten-banana.com"];
 _role4 = "Vehicles";
-_role4names = [format ["Vehicles remain on the server if used at least once every %1 hours.", [A3W_vehicleMaxUnusedTime] call fn_numbersText]];
-_role5 = "Vehicles";
-_role5names = ["All locked vehicles can be hot-wired by engineers with the right tools."];
-_role6 = "Pay Day";
-_role6names = [format ["Rewards every %1 minutes for holding territories.", [A3W_territoryPayroll] call fn_numbersText]];
-_role7 = "A tip for you...";
-_role7names = ["Press END to use ear plugs.  Great for loud vehicles."];
-_role8 = "Class Perks: Medic";
+_role4names = [format ["Vehicles remain on the server if used at least once every %1 hours.", _maxLifetime]];
+_role5 = "Pay Day";
+_role5names = [format ["Rewards every %1 minutes for holding territories.", (_timeInterval / 60)]];
+_role6 = "A tip for you...";
+_role6names = ["Press END to use ear plugs.  Great for loud vehicles."];
+_role7 = "Class Perks: Medic";
+_role7names = ["Revive with MedKit.","Heal with MedKit."];
+_role8 = "Class Perks: Sniper";
 _role8names = ["Perks coming soon."];
-_role9 = "Class Perks: Sniper";
-_role9names = ["Perks coming soon."];
-_role10 = "Class Perks: Engineer";
-_role10names = ["Perks coming soon."];
-_role11 = "Class Perks: Diver";
-_role11names = ["This class is dumb, and will be replaced", "with something more festive."];
+_role9 = "Class Perks: Engineer";
+_role9names = ["Break into locked vehicles.","Repair vehicles with a ToolKit."];
+_role10 = "Class Perks: Diver";
+_role10names = ["This class is dumb, and will soon be replaced with something more festive."];
 
 {
 sleep 2;
@@ -57,7 +59,6 @@ sleep (_onScreenTime);
 [_role7, _role7names],
 [_role8, _role8names],
 [_role9, _role9names],
-[_role10, _role10names],
-[_role11, _role11names]
+[_role10, _role10names]
 ];
 
