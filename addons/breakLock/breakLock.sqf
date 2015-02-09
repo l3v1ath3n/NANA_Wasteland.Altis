@@ -18,13 +18,13 @@ if (_type == _x select 1) then
 	};
 } forEach (call allVehStoreVehicles);
 
-_break = floor (random 100);
+//_break = floor (random 100);
 //hint format ["Break is %1 and price is %2", _break, _price];
 
-if (_break < _price / 4) exitWith {
-	hint "Your ToolKit broke";
-	player removeItem "ToolKit";
-};
+//if (_break < _price / 4) exitWith {
+//	hint "Your ToolKit broke";
+//	player removeItem "ToolKit";
+//};
 
  for "_i" from _price to 0 step -1 do
  {
