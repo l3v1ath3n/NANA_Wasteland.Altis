@@ -24,4 +24,6 @@ Planned features [NANA]
        Custom static models!
        Less default textures!
        Custom classes, each with their own perks.
+       Object saving in R3F inventory.  (maybe)
+       ~~Open chat.~~
        
