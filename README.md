@@ -15,3 +15,13 @@ The mission is not ready yet, so for now it's just a placeholder :)
        KoS - His_Shadow
        KoS - Bewilderbeest
        404 - Del1te
+
+Planned features [NANA]
+       Intro of sorts
+       More custom sounds!
+       More custom textures!
+       Custom static models!
+       Less default textures!
+       Custom classes, each with their own perks.
+       
+       
