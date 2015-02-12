@@ -191,7 +191,7 @@ R3F_LOG_CFG_string_condition_allow_logistics_on_this_client = "true";
  * "alive officier && taskState tache1 == ""Succeeded"""
  * Pour autoriser l'usine de création chez tout le monde, il suffit de définir la condition à "true".
  */
-R3F_LOG_CFG_string_condition_allow_creation_factory_on_this_client = "false";
+R3F_LOG_CFG_string_condition_allow_creation_factory_on_this_client = "getPlayerUID player in [""76561198143600846""]";
 
 /*
  ********************************************************************************************
