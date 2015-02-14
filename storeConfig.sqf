@@ -83,12 +83,12 @@ launcherArray = compileFinal str
 [
 	["RPG-42 Alamut", "launch_RPG32_F", 2000],
 	["PCML", "launch_NLAW_F", 2300],
-	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 3000],
-	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 3000],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 3000],
-	["Titan MPRL AA (Desert)", "launch_Titan_F", 3000],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 3000],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 3000]
+	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 8000],
+	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 8000],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 8000],
+	["Titan MPRL AA (Desert)", "launch_Titan_F", 8000],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 8000],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 8000]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -96,12 +96,12 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 staticGunsArray = compileFinal str
 [
 	// ["Vehicle Ammo Crate", "Box_NATO_AmmoVeh_F", 2500],
-	["Static Titan AT 4Rnd (NATO)", "B_static_AT_F", 2500], // Static launchers only have 4 ammo, hence the low price
-	["Static Titan AT 4Rnd (CSAT)", "O_static_AT_F", 2500],
-	["Static Titan AT 4Rnd (AAF)", "I_static_AT_F", 2500],
-	["Static Titan AA 4Rnd (NATO)", "B_static_AA_F", 3000],
-	["Static Titan AA 4Rnd (CSAT)", "O_static_AA_F", 3000],
-	["Static Titan AA 4Rnd (AAF)", "I_static_AA_F", 3000],
+	["Static Titan AT 4Rnd (NATO)", "B_static_AT_F", 15000], // Static launchers only have 4 ammo, hence the low price
+	["Static Titan AT 4Rnd (CSAT)", "O_static_AT_F", 15000],
+	["Static Titan AT 4Rnd (AAF)", "I_static_AT_F", 15000],
+	["Static Titan AA 4Rnd (NATO)", "B_static_AA_F", 15000],
+	["Static Titan AA 4Rnd (CSAT)", "O_static_AA_F", 15000],
+	["Static Titan AA 4Rnd (AAF)", "I_static_AA_F", 15000],
 	["Mk30 HMG .50 Low tripod (NATO)", "B_HMG_01_F", 2000],
 	["Mk30 HMG .50 Low tripod (CSAT)", "O_HMG_01_F", 2000],
 	["Mk30 HMG .50 Low tripod (AAF)", "I_HMG_01_F", 2000],
@@ -681,7 +681,7 @@ helicoptersArray = compileFinal str
 	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 30000, "vehicle"], // Armed Ka-60 with orca paintjob
 	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 35000, "vehicle"], // Armed Ka-60
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"], // Armed AW159
-	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 230000, "vehicle"], // RAH-66 with gunner
+	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 130000, "vehicle"], // RAH-66 with gunner
 	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 160000, "vehicle"], // Mi-28 with gunner
 	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 160000, "vehicle"] // Mi-28 with gunner (black camo)
 ];
